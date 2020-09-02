@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
-import { FormControl } from '@angular/forms'
+
 
 @Component({
   selector: 'app-root',

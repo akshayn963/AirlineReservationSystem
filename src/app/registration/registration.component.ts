@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+//import { FormControl } from '@angular/forms';
+//import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-registration',
