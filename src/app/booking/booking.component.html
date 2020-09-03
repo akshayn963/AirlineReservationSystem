@@ -1,51 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Page</title>
-</head>
-
-<body class="main">
-    <div class="container">
-        <form class="row " class="form-group">
-            <h1 class="text-center">Airline Booking form </h1>
-            <div id="form">
-                <h3 class="text-white">Booking Details</h3>
-                <div id="input">
-                    <input type="text" id="input-group" placeholder="from">
-                    <input type="text" id="input-group" placeholder="To">
-                    <select id="input-group" style="background:black">
-                        <option value="">Preffered airline</option>
-                        <option value="">IndiGo</option>
-                        <option value="">Business class</option>
-                        <option value="">spaceJet</option>
-                    </select>
-
-                </div><!-- end input-->
-                <div id="input2">
-                    <input type="number" id="input-group" placeholder="Adult">
-                    <input type="number" id="input-group" placeholder="children">
-                    <input type="number" id="input-group" placeholder="infants">
-                </div>
-                <div id="input3">
-                    <span id="input-group" class="text-primary">select your Fare</span>
-
-                    <input type="radio" id="input-group" name="r">
-                    <label class="text-white" for="input-group">One way</label>
-
-                    <input type="radio" id="input-group" name="r">
-                    <label class="text-white" for="input-group">Round Trip</label>
-                </div>
-                <div class="input4">
-                    <label for="input-group" style="color:white">Booking Date</label>
-                    <input type="date" class="input-group">
+<div id="booking" class="section">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="booking-form">
+                    <div [formGroup]="fbFormGroup">
+                        <div class="form-group">
+                            <div class="form-checkbox">
+                                <label for="roundtrip" formControlName="all">
+                                    <input type="radio" formControlName="roundtrip" id="roundtrip" name="flight-type">
+                                    <span></span>Roundtrip
+                                </label>
+                                <label for="one-way">
+                                    <input type="radio" id="one-way" formControlName="oneway" name="flight-type">
+                                    <span></span>One way
+                                </label>
+                                <label for="multi-city">
+                                    <input type="radio" id="multi-city" formControlName="multicity" name="flight-type">
+                                    <span></span>Multi-City
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Flying from</span>
+                                    <input class="form-control" formControlName="fromCity" type="text"
+                                        placeholder="City or airport">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Flyning to</span>
+                                    <input class="form-control" formControlName="Tocity" type="text"
+                                        placeholder="City or airport">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Departing</span>
+                                    <input class="form-control" type="date" formControlName="departdate" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Returning</span>
+                                    <input class="form-control" formControlName="returndate" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <span class="form-label">Adults (18+)</span>
+                                    <!-- <select class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select> -->
+                                    <input type="text" formControlName="adt" class="form-control rounded-pill"
+                                        placeholder="Enter count">
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <span class="form-label">Children (0-17)</span>
+                                    <!-- <select class="form-control">
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select> -->
+                                    <input type="text" formControlName="child" class="form-control rounded-pill"
+                                        placeholder="Enter count">
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Travel class</span>
+                                    <!-- <select class="form-control">
+                                        <option>Economy class</option>
+                                        <option>Business class</option>
+                                        <option>First class</option>
+                                    </select> -->
+                                    <input type="text" formControlName="TravelClass" class="form-control rounded-pill"
+                                        placeholder="economy/firstclass">
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-btn">
+                                    <button class="submit-btn" [disabled]="!fbFormGroup.valid" (click)="BookHere()">Book
+                                        Ticket</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-        </form>
+        </div>
     </div>
-</body>
-
-</html>
+</div>

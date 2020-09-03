@@ -10,9 +10,10 @@ import { ForgotpassComponent } from './forgotpass/forgotpass.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },// home page
   { path: 'register', component: RegistrationComponent },
-  { path: 'errorp', component: ErrorpageComponent },
   { path: 'booking', component: BookingComponent },
   { path: 'forgotpsw', component: ForgotpassComponent },
+  { path: '**', component: ErrorpageComponent },
+
 
 
 ];
