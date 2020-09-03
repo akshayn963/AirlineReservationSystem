@@ -11,6 +11,10 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotpassComponent } from './forgotpass/forgotpass.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CarouselComponent } from './carousel/carousel.component';
+import { ForgotComponent } from './forgot/forgot.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 
 @NgModule({
@@ -21,7 +25,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RegistrationComponent,
     ErrorpageComponent,
     LoginComponent,
-    ForgotpassComponent
+    ForgotpassComponent,
+    CarouselComponent,
+    ForgotComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +36,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

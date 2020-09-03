@@ -48,12 +48,12 @@
 
                 <div class="form-group d-flex justify-content-center align-items-center text-light">
                     <button type="submit" class="btn btn-md btn-danger mt-3" [disabled]="!fbFormGroup.valid"
-                        (click)="RegisterProcessHere()">SUBMIT</button>
+                        routerLink="/login" (click)="RegisterProcessHere()">SUBMIT</button>
                 </div>
 
 
-                <div class="hint-text" style="color:white; text-align: center;">Already have an account? <a href="#"
-                        style="color: white;">Login here</a></div>
+                <div class="hint-text" style="color:white; text-align: center;">Already have an account? <a
+                        routerLink="/login" style="color: white;">Login here</a></div>
             </div>
         </div>
     </div>

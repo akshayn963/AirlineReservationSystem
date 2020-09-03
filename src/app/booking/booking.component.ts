@@ -41,4 +41,12 @@ export class BookingComponent implements OnInit {
     //this.router.navigate(['login']);
   }
 
+  // async getBookings(id){
+  //   const data =id;
+  //   const url = 'http://localhost:3600/getBoookingsDetails';
+  //   await this.http.post(url, data).subscribe((res)=>{
+  //     return res;
+  //   })
+  // }
+
 }

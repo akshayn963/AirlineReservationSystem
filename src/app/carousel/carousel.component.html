@@ -1,0 +1,29 @@
+<ngb-carousel *ngIf="images" style="height:400px;width:1000px; margin:50px;">
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+            <img [src]="images[0]" alt="Random first slide"
+                style="height:400px;width:1000px;display:flex;justify-content:center;align-items: center;">
+        </div>
+        <div class="carousel-caption align-items-start">
+            <h3 style="color:red;">“THE WORLD IS A BOOK AND THOSE WHO DO NOT TRAVEL READ ONLY A PAGE.”</h3>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+            <img [src]="images[1]" alt="Random second slide"
+                style="height:400px;width:1000px;display:flex;justify-content:center;align-items: center;">
+        </div>
+        <div class="carousel-caption align-items-start">
+            <h3 style="color:red;">“TRAVEL MAKES ONE MODEST, YOU SEE WHAT A TINY PLACE YOU OCCUPY IN THE WORLD.”</h3>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+            <img [src]="images[2]" alt="Random third slide"
+                style="height:400px;width:1000px;display:flex;justify-content:center;align-items: center;">
+        </div>
+        <div class="carousel-caption align-items-start">
+            <h3 style="color:red;">“TRAVELING – IT LEAVES YOU SPEECHLESS, THEN TURNS YOU INTO A STORYTELLER.”</h3>
+        </div>
+    </ng-template>
+</ngb-carousel>

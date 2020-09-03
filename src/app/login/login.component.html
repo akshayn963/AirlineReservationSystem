@@ -1,1 +1,147 @@
-<p>login works!</p>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <img src="assets\1.svg" style="margin-right:10px;" id="logo" alt="" />
+    <a class="navbar-brand" href="" style="font-size:20px;color:white;">Airline</a>
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link btn btn-secondary mr-2" type="button" style="color:white" routerLink="/login/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-secondary mr-2" type="button" style="color:white"
+                (click)="Reghere()">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-secondary" type="button" style="color:white" routerLink="/contact">Contact Us</a>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="container-fluid main-container">
+    <div class="row d-flex justify-content-center align-items-center caro">
+        <app-carousel></app-carousel>
+
+        <div class="container-fluid login-container" [formGroup]="fbFormGroup">
+
+            <div class="row d-flex flex-column justify-content-center align-items-center p-5" id="login">
+                <h1>Login</h1>
+                <div class="col-12 d-flex flex-column mb-3 mt-3">
+                    <input type="email" id="email" class="rounded-pill mb-3" placeholder="Enter an email"
+                        formControlName="email">
+
+                    <label for="" style="color:white; font-size: small" *ngIf="
+                  fbFormGroup.get('email').invalid &&
+                  fbFormGroup.get('email').touched
+                ">Email Required</label>
+                    <input type="password" id="psw" class="rounded-pill" placeholder="Enter an password"
+                        formControlName="password">
+                    <label for="" style="color:white; font-size: small" *ngIf="
+                  fbFormGroup.get('password').invalid &&
+                  fbFormGroup.get('password').touched
+                ">password Required</label>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <button class="btn btn-danger rounded-pill mr-3" [disabled]="!fbFormGroup.valid"
+                        routerLink="/booking" (click)="enteruser()">Login</button>
+
+                </div>
+                <div class="col-12 mt-3 mb-3">
+                    <small (click)="gotoforgot('forgot')" style="cursor: pointer;"
+                        class="text-muted d-flex justify-content-center mb-4">Forgot Password?</small>
+                    <p class="sm-text">Don't have an account?<a (click)="Reghere()" class="Register">Register
+                            Here</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+            A simple danger alert—check it out!
+        </div>
+        <footer class="mainfooter" role="contentinfo">
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <!--Column1-->
+                            <div class="footer-pad" style="color:white">
+                                <h4>Services</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Retiring Rooms</a></li>
+                                    <li><a href="#">E-Catering</a></li>
+                                    <li><a href="#">E-Ticketing</a></li>
+                                    <li><a href="#">Forms</a></li>
+                                    <li><a href="#">News and Updates</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <!--Column1-->
+                            <div class="footer-pad" style="color:white">
+                                <h4>Popular Domestic Routes in India</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Delhi to Mumbai Flights</a></li>
+                                    <li><a href="#">Mumbai to Delhi Flights</a></li>
+                                    <li><a href="#">Bangalore to Delhi Flights</a></li>
+                                    <li><a href="#">Delhi to Goa Flights</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <!--Column1-->
+                            <div class="footer-pad" style="color:white">
+                                <h4>Popular International Routes in India</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Mumbai to Dubai Flights</a></li>
+                                    <li><a href="#"> Mumbai to Singapore Flights</a></li>
+                                    <li><a href="#">Delhi to Dubai Flights</a></li>
+                                    <li><a href="#">Delhi to Singapore Flights</a></li>
+                                    <li>
+                                        <a href="#"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3" style="color:white">
+                            <h4>Follow Us</h4>
+                            <ul class="social-network social-circle d-flex">
+                                <a href="#" class="icoFacebook mr-2" title="Facebook">
+                                    <fa-icon [icon]="faFacebook" style="font-size:20px"></fa-icon>
+                                </a>
+                                <a href="#" class="icoyoutube" title="youtube">
+                                    <fa-icon [icon]="faYoutube" style="font-size:20px"></fa-icon>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 copy">
+                            <p class="text-center" style="color:white;">@ copy Copyright 2020 - Airline. All rights
+                                reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <footer class="footer d-flex justify-content-between p-3 w-100">
+            <div>
+                <p>Contact information:Airline</p>
+                <p>All Rights reserved & copy; cdac graduates</p>
+                <p>If you have any suggestions or problems with this
+                    Airline reservation system, please let us know.</p>
+            </div>
+
+            <div>
+                <ul class="footer p-2">
+                    <h5 class="font-size:20px;"><a href="#" class="icophone mr-2" title="phone">
+                            <fa-icon [icon]="faPhone" style="font-size:20px"></fa-icon>
+                        </a>- +91 9400636353</h5>
+                    <h5 class="font-size:20px;"><a href="#" class="icoemail mr-2" title="email">
+                            <fa-icon [icon]="faAt" style="font-size:20px"></fa-icon>
+                        </a>- abc@yahoo.com</h5>
+                </ul>
+            </div>
+
+        </footer>
+    </div>
