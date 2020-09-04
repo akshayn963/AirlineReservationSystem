@@ -1,27 +1,28 @@
-# Myapp
+# Airline reservation system Team 8
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> Online airline ticketing saves time and money for the customer as well as the airline company thereby making air travel more customer-centric. This project is an attempt to simulate the basic concepts of an airline reservation system.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> Our airline ticket reservation system has the following features:-
 
-## Build
+> Customers can:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+1. Create an account
+2. Book tickets in the class of their choice
+3. Cancel booked tickets
+4. View booked tickets history.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> This project was implemented using Angular,HTML,CSS,Boostrap for the front-end and nodeJS for the back-end. The database was created and updated using MySQL.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Team members : -->
 
-## Further help
+```
+1. Anjali badgujar (Roll No :-200240520017)
+2. Akshay Nemade  (Roll No :-200240520014)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+
