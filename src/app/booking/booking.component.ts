@@ -15,13 +15,18 @@ export class BookingComponent implements OnInit {
     // oneway: [],
     // multicity: [],
     //all: [],
+
+    all: [],
     fromCity: ['', Validators.required],
     Tocity: ['', Validators.required],
     departdate: ['', Validators.required],
     returndate: [],
     adt: ['', Validators.required],
     child: ['', Validators.required],
-    TravelClass: ['', Validators.required]
+    TravelClass: ['', Validators.required],
+    flight: [],
+
+
 
   });
   constructor(
@@ -31,14 +36,29 @@ export class BookingComponent implements OnInit {
   ) { }
 
 
-  ngOnInit(): void { }
+  //ngOnInit(): void { }
+  ngOnInit(): void {
+
+    if (!sessionStorage.getItem("sid")) {
+
+      this.router.navigate(['login']);
+    }
+  }
+
+  // akash 
+  LogoutHere() {
+    sessionStorage.removeItem('sid');
+    this.router.navigate(['login']);
+  }
+
   async BookHere() {
     const data = this.fbFormGroup.value;
     const url = 'http://localhost:3600/bookdetails';
 
-    await this.http.post(url, data).toPromise();
+    let respp = await this.http.post(url, data).toPromise();
+    console.log(respp);
     this.fbFormGroup.reset();
-    //this.router.navigate(['login']);
+    // this.router.navigate(['sticket']);
   }
 
   // async getBookings(id){

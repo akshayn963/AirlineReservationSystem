@@ -36,6 +36,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  public recvAuthData: any = [];
+
   async enteruser() {
 
 
@@ -43,14 +45,23 @@ export class LoginComponent implements OnInit {
     //ajax call
     const url = 'http://localhost:3600/auth-user';
     const result: any = await this.http.post(url, data).toPromise();
-    console.log(result);
+    //console.log(result);
     // add session here
-    if (result.opr) {
+    // if (result.opr) {
+    //   sessionStorage.setItem('sid', 'true');
+    //   this.router.navigate(['login']);
+    // } else {
+    //   this.uiInvalidCredential = true;
+    // }
+
+    this.recvAuthData = result;
+
+    if (this.recvAuthData[0].email === this.fbFormGroup.value.email) {
+
       sessionStorage.setItem('sid', 'true');
-      this.router.navigate(['login']);
-    } else {
-      this.uiInvalidCredential = true;
+      this.router.navigate(['booking']);
     }
+
     this.fbFormGroup.reset();
 
   }

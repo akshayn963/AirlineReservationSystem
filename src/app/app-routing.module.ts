@@ -6,6 +6,8 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { BookingComponent } from './booking/booking.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { SticketComponent } from './sticket/sticket.component';
+
 //import { ForgotpassComponent } from './forgotpass/forgotpass.component';
 
 
@@ -16,8 +18,10 @@ const routes: Routes = [
   { path: 'booking', component: BookingComponent },
   { path: 'contact', component: ContactusComponent },
   { path: 'forgot', component: ForgotComponent },
+  { path: 'bticket', component: SticketComponent },
   { path: '**', component: ErrorpageComponent },
-  //{ path: '', redirectTo: 'login', pathMatch: 'full' }
+
+
 ];
 
 @NgModule({

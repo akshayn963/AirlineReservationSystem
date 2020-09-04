@@ -1,0 +1,32 @@
+<div id="image">
+    <h3 class="head">Booking Details for Management Team</h3>
+
+    <div class="container mt-5">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>location</th>
+                    <th>Destination</th>
+                    <th>departDate</th>
+                    <th>returndate</th>
+                    <th>adults</th>
+                    <th>children</th>
+                    <th>TravelClass</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{user.location}}</td>
+                    <td>{{user.destination}}</td>
+                    <td>{{user.departDate}}</td>
+                    <td>{{user.returndate}}</td>
+                    <td>{{user.adults}}</td>
+                    <td>{{user.children}}</td>
+                    <td>{{user.travelclass}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+#image{
+    background:url("/assets/bkdetails.jpg");
+    height:100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#border{
+    border: 2px solid black;
+}
+.head{
+    color:blueviolet;
+}

@@ -15,6 +15,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { SticketComponent } from './sticket/sticket.component';
+import { WcuserComponent } from './wcuser/wcuser.component';
+
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { ContactusComponent } from './contactus/contactus.component';
     ForgotpassComponent,
     CarouselComponent,
     ForgotComponent,
-    ContactusComponent
+    ContactusComponent,
+    SticketComponent,
+    WcuserComponent,
+
   ],
   imports: [
     BrowserModule,
